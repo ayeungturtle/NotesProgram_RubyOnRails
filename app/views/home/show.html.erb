@@ -1,0 +1,11 @@
+<div id="sortthis">
+    <%@notes.each do |note|%>
+        <div class = note id = <%=note.id%>> <%=note.id%> - <%= note.text %> 
+    <a href="/notes/delete/<%=note.id%>"> [DELETE] </a> </div>
+    <%end%>
+</div>
+
+<form action="/notes/add">
+    <input type="text" name="text" />
+    <button type="submit">Add Card</button>
+</form>
